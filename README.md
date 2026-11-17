@@ -1,2 +1,4 @@
 # OS_Mini_Proj
-OS Mini Project - Part A and B
+OS Mini Project - Parts A and B
+Mark Almazan
+Professor Vedulla
