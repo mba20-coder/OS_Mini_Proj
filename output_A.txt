@@ -1,0 +1,33 @@
+FCFS
+| P1 0-8 | P2 8-12 | P3 12-21 | P4 21-26 |
+PID  Waiting  Turnaround  Response
+P1   0        8           0
+P2   7        11          7
+P3   10       19          10
+P4   18       23          18
+Average waiting: 8.75
+Average turnaround: 15.25
+Average response: 8.75
+
+SJF
+| P1 0-8 | P2 8-12 | P4 12-17 | P3 17-26 |
+PID  Waiting  Turnaround  Response
+P1   0        8           0
+P2   7        11          7
+P3   15       24          15
+P4   9        14          9
+Average waiting: 7.75
+Average turnaround: 14.25
+Average response: 7.75
+
+Round Robin (q=2)
+| P1 0-2 | P2 2-4 | P3 4-6 | P1 6-8 | P4 8-10 | P2 10-12 | P3 12-14 | P1 14-16 | P4 16-18 | P3 18-20 | P1 20-22 | P4 22-23 | P3 23-26 |
+PID  Waiting  Turnaround  Response
+P1   14       22          0
+P2   7        11          1
+P3   15       24          2
+P4   15       20          5
+Average waiting: 12.75
+Average turnaround: 19.25
+Average response: 2.00
+

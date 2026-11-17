@@ -1,6 +1,8 @@
 import sys
 from collections import deque
 
+sys.stdout = open("output_A.txt", "w")
+
 #Read process.txt
 def read_processes(filename):
     procs = []

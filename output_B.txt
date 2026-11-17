@@ -1,0 +1,35 @@
+Need Matrix
+    A B C
+P0  7 4 3
+P1  1 2 2
+P2  6 0 0
+P3  0 1 1
+P4  4 3 1
+
+Work: [3, 3, 2]
+P1 finishes, Work: [5, 3, 2]
+P3 finishes, Work: [7, 4, 3]
+P4 finishes, Work: [7, 4, 5]
+P0 finishes, Work: [7, 5, 5]
+P2 finishes, Work: [10, 5, 7]
+SAFE <P1, P3, P4, P0, P2>
+
+Request: P1 1 0 2
+Work: [2, 3, 0]
+P1 finishes, Work: [5, 3, 2]
+P3 finishes, Work: [7, 4, 3]
+P4 finishes, Work: [7, 4, 5]
+P0 finishes, Work: [7, 5, 5]
+P2 finishes, Work: [10, 5, 7]
+GRANT <P1, P3, P4, P0, P2>
+
+Request: P4 3 3 0
+Work: [0, 0, 2]
+DENY (unsafe)
+
+Request: P0 4 0 0
+WAIT
+
+Request: P3 1 2 0
+ERROR
+

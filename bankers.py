@@ -1,5 +1,7 @@
 import sys
 
+sys.stdout = open("output_B.txt", "w")
+
 def leq(a, b):
     return all(x <= y for x, y in zip(a, b))
 
