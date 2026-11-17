@@ -32,7 +32,7 @@ available = rows[1]
 max_m = rows[2:2 + n]
 alloc = rows[2 + n:2 + 2 * n]
 
-# B1 - Need matrix
+#Need matrix
 need = [[max_m[i][j] - alloc[i][j] for j in range(m)] for i in range(n)]
 print("Need Matrix")
 print("    " + " ".join(chr(65 + j) for j in range(m)))
@@ -40,7 +40,7 @@ for i in range(n):
     print(f"P{i}  " + " ".join(str(x) for x in need[i]))
 print()
 
-# B2 - Safety algorithm
+#Safety algorithm
 safe, seq, stuck = is_safe(available, alloc, need)
 if safe:
     print("SAFE <" + ", ".join(seq) + ">")
@@ -48,7 +48,7 @@ else:
     print("UNSAFE, could not finish: " + ", ".join(stuck))
 print()
 
-# B3 - Resource requests
+#Requests
 with open(req_file) as f:
     for line in f:
         parts = line.split()
