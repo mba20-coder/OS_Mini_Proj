@@ -1,7 +1,7 @@
 import sys
 from collections import deque
 
-
+#Read process.txt
 def read_processes(filename):
     procs = []
     with open(filename) as f:
@@ -12,7 +12,7 @@ def read_processes(filename):
     procs.sort(key=lambda p: p[1])
     return procs
 
-
+#First Come, First Served
 def fcfs(procs):
     gantt = []
     time = 0
@@ -23,7 +23,7 @@ def fcfs(procs):
         time += burst
     return gantt
 
-
+#Shortest Job First
 def sjf(procs):
     gantt = []
     time = 0
@@ -39,7 +39,7 @@ def sjf(procs):
         left.remove(p)
     return gantt
 
-
+#Round Robin
 def round_robin(procs, q):
     gantt = []
     time = 0
@@ -69,7 +69,7 @@ def round_robin(procs, q):
             queue.append(pid)
     return gantt
 
-
+#Print Gantt Chart
 def print_results(name, procs, gantt):
     print(name)
     print("| " + " | ".join(f"{pid} {s}-{e}" for pid, s, e in gantt) + " |")
